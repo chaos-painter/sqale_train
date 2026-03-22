@@ -14,7 +14,7 @@ SQL_PROMPT = """Below is a database schema and a natural language question. Writ
 def get_sqale_dataset(tokenizer):
     def formatting_prompts_func(examples):
         texts = [
-            SQL_PROMPT.format(s, q, r) + tokenizer.eos_token 
+            SQL_PROMPT.format(s, q, r) + tokenizer.eos_token
             for s, q, r in zip(examples["schema"], examples["question"], examples["query"])
         ]
         return {"text": texts}
