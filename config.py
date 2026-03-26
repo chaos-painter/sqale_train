@@ -14,3 +14,16 @@ GRADIENT_ACCUMULATION_STEPS = 8
 LEARNING_RATE = 2e-4
 MAX_STEPS = 150
 OUTPUT_DIR = "outputs"
+
+
+# Prompt Settings
+SQL_PROMPT = """Below is a database schema and a natural language question. Write a SQL query to answer the question accurately.
+
+### Schema:
+{}
+
+### Question:
+{}
+
+### Response:
+{}"""

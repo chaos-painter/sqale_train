@@ -1,15 +1,6 @@
 from datasets import load_dataset
+from config import SQL_PROMPT
 
-SQL_PROMPT = """Below is a database schema and a natural language question. Write a SQL query to answer the question accurately.
-
-### Schema:
-{}
-
-### Question:
-{}
-
-### Response:
-{}"""
 
 def get_sqale_dataset(tokenizer):
     def formatting_prompts_func(examples):
